@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Musicboxd</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+      /* ANIMAÇÃO */
+      opacity: 0;
+      transform: translateY(30px) scale(0.97);
+      animation: fadeCard 0.6s ease forwards;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeUp 0.5s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .logo span {
+      display: inline-block;
+      background: #f4a261;
+      padding: 10px;
+      border-radius: 12px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeUp 0.5s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    .title h2 {
+      margin-bottom: 5px;
+    }
+
+    .title p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeUp 0.5s ease forwards;
+    }
+
+    .input-group:nth-of-type(1) {
+      animation-delay: 0.4s;
+    }
+
+    .input-group:nth-of-type(2) {
+      animation-delay: 0.5s;
+    }
+
+    .input-group label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #1c1c3c;
+      color: white;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      margin-bottom: 15px;
+
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeUp 0.5s ease forwards;
+      animation-delay: 0.6s;
+    }
+
+    .row a {
+      color: #f4a261;
+      text-decoration: none;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #f4a261, #e76f51);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 15px;
+
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeUp 0.5s ease forwards;
+      animation-delay: 0.7s;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .divider {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      margin: 15px 0;
+
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards;
+      animation-delay: 0.9s;
+    }
+
+    .social {
+      display: flex;
+      gap: 10px;
+
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards;
+      animation-delay: 1s;
+    }
+
+    .social button {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .Spotify {
+      background: #1DB954;
+      color: #fff;
+    }
+
+    .Music {
+      background: #FF0000;
+      color: #fff;
+    }
+
+    .signup {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 10px;
+
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards;
+      animation-delay: 0.8s;
+    }
+
+    .signup a {
+      color: #f4a261;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 14px;
+      color: #ccc;
+      text-decoration: none;
+
+      opacity: 0;
+      animation: fadeUp 0.5s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    /* KEYFRAMES */
+
+    @keyframes fadeCard {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <a href="index.html" class="back">← Voltar</a>
+
+  <div class="container">
+    <div class="card">
+
+      <div class="logo">
+        <span>🎵</span>
+        <h1>musicboxd</h1>
+      </div>
+
+      <div class="title">
+        <h2>Bem-vindo de volta!</h2>
+        <p>Entre para avaliar seus álbuns favoritos</p>
+      </div>
+
+      <form>
+        <div class="input-group">
+          <label>E-mail</label>
+          <input type="email" placeholder="seu@email.com" required>
+        </div>
+
+        <div class="input-group">
+          <label>Senha</label>
+          <input type="password" placeholder="••••••••" required>
+        </div>
+
+        <div class="row">
+          <label><input type="checkbox"> Lembrar-me</label>
+          <a href="#">Esqueceu a senha?</a>
+        </div>
+
+        <button class="btn">Entrar </button>
+      </form>
+
+      <div class="signup">
+        Não tem uma conta? <a href="cadastro.html">Cadastre-se gratuitamente</a>
+      </div>
+
+      <div class="divider">Ou continue com</div>
+
+      <div class="social">
+        <button class="Spotify">Spotify</button>
+        <button class="Music">Music</button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

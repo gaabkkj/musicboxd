@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Musicboxd</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px;
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo span {
+      background: #f4a261;
+      padding: 10px;
+      border-radius: 12px;
+      display: inline-block;
+    }
+
+    .logo h1 {
+      margin-top: 10px;
+      font-size: 22px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .title h2 {
+      margin-bottom: 5px;
+    }
+
+    .title p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #1c1c3c;
+      color: white;
+      outline: none;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #f4a261, #e76f51);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-link {
+      text-align: center;
+      font-size: 13px;
+      margin-top: 15px;
+    }
+
+    .login-link a {
+      color: #f4a261;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .back {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<a href="index.html" class="back">← Voltar</a>
+
+<div class="container">
+  <div class="card">
+
+    <div class="logo">
+      <span>🎵</span>
+      <h1>musicboxd</h1>
+    </div>
+
+    <div class="title">
+      <h2>Criar conta</h2>
+      <p>Entre para avaliar seus álbuns favoritos</p>
+    </div>
+
+    <form>
+
+      <div class="input-group">
+        <label>Nome</label>
+        <input type="text" placeholder="Seu nome">
+      </div>
+
+      <div class="input-group">
+        <label>E-mail</label>
+        <input type="email" placeholder="seu@email.com">
+      </div>
+
+      <div class="input-group">
+        <label>Senha</label>
+        <input type="password" placeholder="••••••••">
+      </div>
+
+      <div class="input-group">
+        <label>Confirmar senha</label>
+        <input type="password" placeholder="••••••••">
+      </div>
+
+      <button class="btn">Criar conta</button>
+
+    </form>
+
+    <div class="login-link">
+      Já tem conta? <a href="login.html">Entrar</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
